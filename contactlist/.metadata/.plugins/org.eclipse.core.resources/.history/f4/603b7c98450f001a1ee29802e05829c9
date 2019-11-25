@@ -1,0 +1,5 @@
+package com.testyantra.assessment.dto;
+
+public class JavaBean {
+
+}

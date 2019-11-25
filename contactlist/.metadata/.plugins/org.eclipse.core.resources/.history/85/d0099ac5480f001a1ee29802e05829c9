@@ -1,0 +1,39 @@
+package com.testyantra.assessment.dao;
+
+import java.util.List;
+
+import com.testyantra.assessment.dto.ContactBean;
+
+public class MobileDAOImpl implements MobileDAO {
+
+	@Override
+	public int selectContact() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int insertContact() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int updateContact() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<ContactBean> getAllContacts(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ContactBean searchContact(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

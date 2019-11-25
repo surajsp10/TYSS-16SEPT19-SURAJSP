@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;mobilesimulator&apos;" deleteContents="false" description="Delete resource &apos;mobilesimulator&apos;" element1="/mobilesimulator" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1574668617779"/>&#x0A;<refactoring comment="Rename resource &apos;assessment&apos; to &apos;mobilesimulator&apos;" description="Rename resource &apos;assessment&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/assessment" name="mobilesimulator" stamp="1574668656691" updateReferences="true"/>
+</session>

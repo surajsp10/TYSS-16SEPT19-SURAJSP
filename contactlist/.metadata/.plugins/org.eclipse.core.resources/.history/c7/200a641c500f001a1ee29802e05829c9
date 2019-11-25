@@ -1,0 +1,39 @@
+package com.testyantra.assessment;
+
+import java.util.Scanner;
+
+public class App {
+	
+	public static void main(String[] args) {
+		
+		
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter a number from 1 to 3");
+		System.out.println("Press 1 to call");
+		System.out.println("Press 2 to search for contact");
+		System.out.println("Press 3 to operate on contact");
+		
+		int opt = scan.nextInt();
+		
+		
+		switch(opt) {
+		
+		
+		case 1 : case 1 :MobileDAO dao = EmployeeManager.getEmployeeDAO();
+		List<EmployeeBean> result = dao.getAllEmployeeData();
+		
+		for(EmployeeBean bean : result) {
+			System.out.println("Id "+bean.getId());
+			System.out.println("Name "+bean.getName());
+			System.out.println("Salary "+bean.getSal());
+			System.out.println("Gender "+bean.getGender());
+			
+		}
+		
+
+		}
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.testyantra.assessment.dao;
+
+public class MobileDAOImpl {
+
+}

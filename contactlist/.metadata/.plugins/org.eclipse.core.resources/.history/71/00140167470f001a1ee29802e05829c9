@@ -1,0 +1,13 @@
+package com.testyantra.assessment.dao;
+
+import java.util.List;
+
+public interface MobileDAO {
+
+	public int selectContact();
+	public int insertContact();
+	public int updateContact();
+	
+	public List<ContactInfo> getAllContacts(String name);
+	public ContactInfo searchContact(String name);
+}

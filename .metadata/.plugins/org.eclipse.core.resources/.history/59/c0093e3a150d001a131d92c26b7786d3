@@ -1,0 +1,27 @@
+package com.tyss.jpahibernate.manytomany;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name="Student")
+public class Student {
+
+	@Id
+	@Column
+	private int sid;
+	@Column
+	private String sname;
+	
+	@ManyToMany
+	@JoinTable()
+	
+	
+	private List<Course> Course;
+}

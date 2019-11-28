@@ -1,0 +1,22 @@
+package com.tyss.springpractice;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	ApplicationContext context = 
+    			new AnnotationConfigApplicationContext(AppConfig.class); 
+    	
+     Samsung s8 = context.getBean(Samsung.class);
+     System.out.println(s8.);
+       Samsung s7 = new Samsung();
+       s7.config();
+    }
+}

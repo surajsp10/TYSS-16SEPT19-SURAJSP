@@ -1,0 +1,9 @@
+package com.tyss.jpawithhibernate.jpql;
+
+public class RetreiveUsingJPQLDemo {
+
+	public static void main(String[] args) {
+		
+	}
+	
+}

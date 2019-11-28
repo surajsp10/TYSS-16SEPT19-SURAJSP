@@ -1,0 +1,5 @@
+package com.tyss.jpahibernate.manytomany;
+
+public class Course {
+
+}

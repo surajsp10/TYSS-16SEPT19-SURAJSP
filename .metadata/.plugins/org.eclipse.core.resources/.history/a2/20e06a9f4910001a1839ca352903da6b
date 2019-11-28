@@ -1,0 +1,9 @@
+package com.tyss.springcore;
+
+public class BookAuthor {
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

@@ -1,0 +1,34 @@
+package com.tyss.jpawithhibernate;
+
+import java.util.ArrayList;
+
+import com.tyss.jpahibernate.manytomany.Course;
+
+public class TestManyToMany {
+
+	
+	public static void main(String[] args) {
+		
+		
+		Course c1 = new Course();
+		c1.setCid(1);
+		c1.setCname("Java");
+		
+		
+		Course c2 = new Course();
+		c1.setCid(2);
+		c1.setCname("JDBC");
+		
+		Course c3 = new Course();
+		c1.setCid(3);
+		c1.setCname("SQL");
+		
+		
+		ArrayList<Course> a = new ArrayList<Course>();
+		a.add(c1);
+		a.add(c2);
+		a.add(c3);
+		
+		
+	}
+}

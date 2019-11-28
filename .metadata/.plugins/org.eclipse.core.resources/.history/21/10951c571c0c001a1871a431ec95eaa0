@@ -1,0 +1,21 @@
+package com.tyss.jpawithhibernate;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	EntityTransaction transaction = null;
+    	EntityManager entitymanager = null;
+    	
+    	EntityManagerFactory entityManagerFactory = Persistence.
+    
+    
+    }
+}

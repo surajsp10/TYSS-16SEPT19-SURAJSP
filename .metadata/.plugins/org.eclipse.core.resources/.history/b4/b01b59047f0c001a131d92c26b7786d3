@@ -1,0 +1,9 @@
+package com.tyss.program2;
+
+public class TestB {
+
+	
+	GetChips gc = new GetChips();
+	Snacks s = new Lays();
+	gc.getSnacks(s);
+}

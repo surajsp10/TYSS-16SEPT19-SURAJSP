@@ -1,0 +1,18 @@
+package com.tyss.springcore.di;
+
+public class Hello {
+
+	 Hello() {
+		System.out.println("Hello object created");
+	}
+	private String msg;
+
+	public String getMsg() {
+		return msg;
+	}
+
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
+	
+}

@@ -1,0 +1,9 @@
+package com.tyss.program1;
+
+public class Dog {
+
+	
+	void dog() {
+		System.out.println("BOW BOW");
+	}
+}

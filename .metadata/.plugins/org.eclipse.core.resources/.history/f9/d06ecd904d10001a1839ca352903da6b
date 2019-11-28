@@ -1,0 +1,16 @@
+package com.tyss.springcore.config;
+
+import org.springframework.context.annotation.Bean;
+
+import com.tyss.springcore.di.Author;
+
+public class ConfigurationBookCLass {
+	
+	@Bean(name="author")
+	
+	public Author getAuthor() {
+		Author author = new Author();
+		return author;
+	}
+
+}

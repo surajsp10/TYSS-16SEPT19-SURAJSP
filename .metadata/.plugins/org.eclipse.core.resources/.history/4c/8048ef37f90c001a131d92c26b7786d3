@@ -1,0 +1,13 @@
+package com.tyss.jpawithhibernate;
+
+import com.tyss.jpahibernate.onetomany.PencilBox;
+
+public class TestOnetoMany {
+	public static void main(String[] args) {
+		
+		
+		PencilBox pBox = new PencilBox();
+		
+	}
+
+}

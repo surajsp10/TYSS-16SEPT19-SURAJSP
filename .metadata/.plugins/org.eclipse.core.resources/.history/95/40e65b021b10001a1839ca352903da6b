@@ -1,0 +1,28 @@
+package com.tyss.springcore;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.tyss.springcore.di.Animal;
+import com.tyss.springcore.di.Hello;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+    	
+    	Hello hello = context.getBean(Hello.class);
+    	System.out.println(hello.getMsg());
+    	
+    	
+    	//creating instance of animal
+    	
+    	Animal animal = context.getBean(Animal.class);
+    	animal.makeSound();
+    }
+}

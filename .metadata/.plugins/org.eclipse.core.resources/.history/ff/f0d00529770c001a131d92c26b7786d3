@@ -1,0 +1,8 @@
+package com.tyss.program1;
+
+public class Tiger {
+
+	void tiger() {
+		System.out.println("Grrrrrrrrr");
+	}
+}

@@ -1,0 +1,9 @@
+package com.tyss.program1;
+
+public class Cat {
+
+	
+	void cat() {
+		System.out.println("Meowwww");
+	}
+}

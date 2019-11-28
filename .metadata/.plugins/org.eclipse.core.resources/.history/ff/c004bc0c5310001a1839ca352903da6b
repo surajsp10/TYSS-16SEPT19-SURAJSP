@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsds
+    
+    <bean id="author" class="com.tyss.springcore.di.Book" autowire="byName">
+    
+    <property name="name" value="nothing"></property>
+    <property name="penname" value="reynolds"></property>
+    </bean>
+    <bean id="authorname" class="com.tyss.springcore.di.Author" >
+    <property name="name" value="story"></property>
+    <property name="penname" value="100"></property>
+    </bean>
+    </beans>

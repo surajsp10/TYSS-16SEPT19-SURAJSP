@@ -1,0 +1,11 @@
+package com.tyss.springcore.config;
+
+import com.tyss.springcore.di.Hello;
+
+public class ConfigurationClass {
+	public Hello getHello() {
+		
+		return new Hello();
+	}
+
+}

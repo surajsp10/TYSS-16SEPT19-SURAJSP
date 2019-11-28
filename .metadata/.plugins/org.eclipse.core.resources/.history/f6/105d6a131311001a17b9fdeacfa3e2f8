@@ -1,0 +1,13 @@
+package com.tyss.springmvc.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+
+@Controller
+public class HelloController {
+
+	public String hello(ModelMap map) {
+		map.addAttribute("msg", "Hello world");
+		return "index";
+	}
+}

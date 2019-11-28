@@ -1,0 +1,5 @@
+package com.tyss.jpahibernate.onetomany;
+
+public class Pencil {
+
+}

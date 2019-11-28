@@ -1,0 +1,11 @@
+package com.tyss.program1;
+
+public class TestA {
+
+	public static void main(String[] args) {
+		
+		
+		Animal s = new Cow();
+		s.sound();
+	}
+}

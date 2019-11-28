@@ -1,0 +1,14 @@
+package com.tyss.jpahibernate.onetomany;
+
+public class Pencil {
+	
+	
+	private int pid;
+	
+	private String color;
+	
+	
+	
+	private PencilBox pencilBox;
+
+}

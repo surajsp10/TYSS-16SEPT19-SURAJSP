@@ -1,0 +1,10 @@
+package com.tyss.program1;
+
+public class Sound {
+
+	
+	void getSound(Animal a) {
+		
+		a.sound();
+	}
+}

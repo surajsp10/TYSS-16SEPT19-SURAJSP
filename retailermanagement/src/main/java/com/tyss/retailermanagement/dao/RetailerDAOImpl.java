@@ -5,8 +5,10 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceUnit;
 import javax.persistence.TypedQuery;
+import javax.servlet.http.Cookie;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.web.util.CookieGenerator;
 
 import com.tyss.retailermanagement.dto.ProductBean;
 import com.tyss.retailermanagement.dto.RetailerBean;
@@ -29,6 +31,10 @@ public class RetailerDAOImpl implements RetailerDAO{
 		//		Query query = manager.createQuery(jpql);
 		query.setParameter("id", id);
 		query.setParameter("password", password);
+		
+		Cookie cookie  = new Cookie("retailer","name");
+		
+		
 
 
 		try {

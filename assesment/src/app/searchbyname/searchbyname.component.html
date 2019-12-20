@@ -1,0 +1,46 @@
+<div class="container">
+        <form class="form-inline mt-5 offset-4" >
+                <input class="form-control mr-sm-2" type="text" placeholder="Search by Name" (ngSubmit)='search(form)>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+            <table class="table table-bordered table-hover mt-5">
+                <thead class="thead bg-warning">
+                    <tr>
+                        <th>Index</th>
+                        <th>Product Name</th>
+                        <th>Company</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Add</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                                <!-- id: 1
+                                name: "ghi"
+                                category: "abc"
+                                company: "def"
+                                quantity: 23
+                                price: 1234 -->
+                  <!-- | filter : search; index as i' -->
+                    <tr *ngFor='let product of products' >
+                        <td>{{product.id}}</td>
+                        <td>{{product.name}}</td>
+                        <td>{{product.company}}</td>
+                        <td>{{product.category}}</td>
+                        <td>{{product.quantity}}</td>
+                        <td>{{product.price}}</td>
+                        <td><button type="button" class="btn btn-success" (click)="addToCart(product)">Add to Cart</button></td>
+                        <td><button type="button" class="btn btn-primary" (click)="update(product)">Update</button></td>
+                        <td><button type="button" class="btn btn-danger" (click)="delete(product)">Delete</button></td>
+                        
+                    </tr>
+                </tbody>
+              </table>
+
+
+
+</div>

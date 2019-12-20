@@ -1,0 +1,78 @@
+<div class="container">
+
+    <div class="card col-md-7 offset-3 text-center card-body mt-5 " style="width: 50%;height:90%;border: 0px solid ">
+        <div class="card-header bg-Link ">
+            <h1>ADD PRODUCT</h1>
+        </div>
+
+        <form #addproductform='ngForm' (ngSubmit)='addProduct(addproductform)'>
+            
+
+            <div class="form-group row mt-5 ml-3 col-md-10">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Category</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="category" name="category"
+                            placeholder="Category" #category="ngModel" ngModel required>
+                        <div *ngIf="category.touched && category.invalid">
+                            <p class="alert alert-danger" *ngIf="category.errors.required">*This field is required
+                            </p>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="form-group row mt-5 ml-3 col-md-10">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label">Company</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="company" name="company"
+                                placeholder="Company" #company="ngModel" ngModel required>
+                            <div *ngIf="company.touched && company.invalid">
+                                <p class="alert alert-danger" *ngIf="company.errors.required">*This field is required
+                                </p>
+                            </div>
+                        </div>
+                </div>
+
+            <div class="form-group row mt-5 ml-3 col-md-10">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Name</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Name"
+                        #name="ngModel" ngModel required>
+                    <div *ngIf="name.touched && name.invalid">
+                        <p class="alert alert-danger" *ngIf="name.errors.required">*This field is required </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row mt-5 ml-3 col-md-10">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Price</label>
+                <div class="col-sm-8">
+                    <input type="number" class="form-control" id="price" name="price" placeholder="Price"
+                        #price="ngModel" ngModel required>
+                    <div *ngIf="price.touched && price.invalid">
+                        <p class="alert alert-danger" *ngIf="price.errors.required">*This field is required </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group row mt-5 ml-3 col-md-10">
+                <label for="inputPassword3" class="col-sm-3 col-form-label">Quantity</label>
+                <div class="col-sm-8">
+                    <input type="number" class="form-control" id="quantity" name="quantity" placeholder="quantity"
+                        #quantity="ngModel" ngModel required>
+                    <div *ngIf="quantity.touched && quantity.invalid">
+                        <p class="alert alert-danger" *ngIf="quantity.errors.required">*This field is required</p>
+                       
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group row  text-center">
+                <div class="col-sm-9">
+                    <button type="submit" class="btn btn-primary float-right">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

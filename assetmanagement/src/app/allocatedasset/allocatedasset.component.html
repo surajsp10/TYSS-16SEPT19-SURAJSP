@@ -1,0 +1,170 @@
+<!-- <div class="col-md-6 offset-md-3 mt-5"  >
+        <form #form="ngForm" (ngSubmit)="assetAllocationData(form)">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Allocate Assets</h5>
+                </div>
+                <div class="card-body">
+                   
+    
+                    <div class="form-group">
+                        <input type="text" name="assestname" id="assestname" class="form-control"
+                            placeholder="Enter Asset Name...." #assestname="ngModel" [(ngModel)]="auth.request.assestname"
+                            ngModel required>
+                        
+                    </div>
+    
+                    <div class="form-group">
+                        <input type="number" name="empno" id="empno" class="form-control"
+                            placeholder="Enter Employee Number...." #empno="ngModel" ngModel [(ngModel)]="auth.request.empno"
+                            required>
+                        <div *ngIf="empno.touched && empno.invalid">
+                            <p class="alert alert-danger" *ngIf="empno.errors.required">*This Field is required</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="allocation_date" id="allocation_date" class="form-control"
+                            placeholder="Enter Allocation Date...." #allocation_date="ngModel" ngModel required>
+                        <div *ngIf="allocation_date.touched && allocation_date.invalid">
+                            <p class="alert alert-danger" *ngIf="allocation_date.errors.required">*This Field is required
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="realse_date" id="realse_date" class="form-control"
+                            placeholder="Enter Release Date...." #realse_date="ngModel" ngModel required>
+                        <div *ngIf="realse_date.touched && realse_date.invalid">
+                            <p class="alert alert-danger" *ngIf="realse_date.errors.required">*This Field is required</p>
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <input type="text" name="status" id="status" class="form-control" placeholder="Enter Status...."
+                            #status="ngModel" [(ngModel)]="SelectedUser1" ngModel required>
+                        <div *ngIf="status.touched && status.invalid">
+                            <p class="alert alert-danger" *ngIf="status.errors.required">*This Field is required</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-outline-success float-right"
+                        (click)="done()">Submit</button>
+                </div>
+            </div>
+        </form>
+    
+    
+    </div> -->
+
+
+
+    <div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+
+    <div class="card col-md-7 offset-3 text-center card-body mt-5 " style="width: 50%;height:90%;border: 0px solid ">
+        <div class="card-header bg-Link ">
+            <h1>ALLOCATE ASSET</h1>
+        </div>
+
+        <form #assetallocationform='ngForm' (ngSubmit)='AssetAllocation(assetallocationform)'>
+            <div class="form-group row mt-5 ml-3 col-md-10">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Allocation Date</label>
+                <div class="col-sm-8">
+                    <input type="date" class="form-control" id="allocation_date" name="allocation_date" placeholder="Allocation Date"
+                        #allocation_date="ngModel" ngModel required>
+                    <div *ngIf="allocation_date.touched && allocation_date.invalid">
+                        <p class="alert alert-danger" *ngIf="allocation_date.errors.required">*This field is required </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row mt-5 ml-3 col-md-10">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Asset ID</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="asset_id" name="asset_id"
+                            placeholder="Asset ID" #asset_id="ngModel" [(ngModel)]="auth.request.asset_id" ngModel required>
+                        <div *ngIf="asset_id.touched && asset_id.invalid">
+                            <p class="alert alert-danger" *ngIf="asset_id.errors.required">*This field is required
+                            </p>
+                        </div>
+                    </div>
+            </div>
+
+
+            <div class="form-group row mt-5 ml-3 col-md-10">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label">Asset Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="asset_name" name="asset_name"
+                                placeholder="Asset Name" #asset_name="ngModel" [(ngModel)]="auth.request.asset_name"ngModel required>
+                            <div *ngIf="asset_name.touched && asset_name.invalid">
+                                <p class="alert alert-danger" *ngIf="asset_name.errors.required">*This field is required
+                                </p>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="form-group row mt-5 ml-3 col-md-10">
+                        <label for="inputEmail3" class="col-sm-3 col-form-label">Department</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="department" name="department"
+                                    placeholder="Asset Name" #department="ngModel" [(ngModel)]="auth.request.department"ngModel required>
+                                <div *ngIf="department.touched && department.invalid">
+                                    <p class="alert alert-danger" *ngIf="department.errors.required">*This field is required
+                                    </p>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="form-group row mt-5 ml-3 col-md-10">
+                            <label for="inputEmail3" class="col-sm-3 col-form-label">Employee no</label>
+                                <div class="col-sm-8">
+                                    <input type="number" class="form-control" id="emp_no" name="emp_no"
+                                        placeholder="Asset Name" #emp_no="ngModel" [(ngModel)]="auth.request.emp_no" ngModel required>
+                                    <div *ngIf="emp_no.touched && emp_no.invalid">
+                                        <p class="alert alert-danger" *ngIf="emp_no.errors.required">*This field is required
+                                        </p>
+                                    </div>
+                                </div>
+                        </div>
+            <div class="form-group row mt-5 ml-3 col-md-10">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Asset Quantity</label>
+                <div class="col-sm-8">
+                    <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Quantity"
+                        #quantity="ngModel" [(ngModel)]="auth.request.quantity" ngModel required>
+                    <div *ngIf="quantity.touched && quantity.invalid">
+                        <p class="alert alert-danger" *ngIf="quantity.errors.required">*This field is required </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row mt-5 ml-3 col-md-10">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label">Status </label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="status" name="status" placeholder="status"
+                            #status="ngModel" [(ngModel)]="auth.status" ngModel required>
+                        <div *ngIf="status.touched && status.invalid">
+                            <p class="alert alert-danger" *ngIf="status.errors.required">*This field is required </p>
+                        </div>
+                    </div>
+                </div>
+          
+
+            <div class="form-group row mt-5 ml-3 col-md-10">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label">Release Date</label>
+                        <div class="col-sm-8">
+                            <input type="date" class="form-control" id="release_date" name="release_date"
+                                placeholder="Release Date" #release_date="ngModel" ngModel required>
+                            <div *ngIf="release_date.touched && release_date.invalid">
+                                <p class="alert alert-danger" *ngIf="release_date.errors.required">*This field is required
+                                </p>
+                            </div>
+                        </div>
+                </div>
+
+            <div class="form-group row  text-center">
+                <div class="col-sm-9">
+                    <button type="submit" class="btn btn-primary float-right" >Submit</button>
+                    <!-- (click)='Allocated(auth.request.request_id)' -->
+                </div>
+            </div>
+        </form>
+    </div>

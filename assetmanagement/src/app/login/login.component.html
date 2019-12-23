@@ -1,0 +1,45 @@
+<div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+<div class="alert alert-danger" >{{this.auth.message}}</div>
+
+<div class="login" *ngIf='this.auth.alogin'>
+  <div class="card col-md-7 offset-3 text-center card-body mt-5 " style="width: 50%;height:90%;border: 0px solid " >
+  <div class="card-header bg-Link ">
+    <h1>Login</h1>
+  </div>
+     
+      <form #loginForm='ngForm' (ngSubmit)='login(loginForm)'>
+        <div class="form-group row mt-5 ml-3 col-md-10">
+          <label for="inputEmail3" class="col-sm-3 col-form-label">ID</label>
+          <div class="col-sm-8">
+            <input type="number" class="form-control" id="user_id" name="user_id" placeholder="Your ID" #user_id="ngModel" ngModel required>
+            <div *ngIf="user_id.touched && user_id.invalid">
+              <p class="alert alert-danger" *ngIf="user_id.errors.required">*This field is required </p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row ml-3 col-md-10">
+          <label for="inputPassword3" class="col-sm-3 col-form-label">Password</label>
+          <div class="col-sm-8">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password" #password="ngModel" ngModel required>
+          <div *ngIf="password.touched && password.invalid">
+            <p class="alert alert-danger" *ngIf="password.errors.required">*This field is required</p>
+            <p class="alert alert-danger" *ngIf="password.errors.minlength">*password must be atleast 8 charecters</p>
+          </div>
+          </div>
+        </div>
+        
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <div class="form-group row  text-center">
+          <div class="col-sm-9">
+            <button type="submit" class="btn btn-primary float-right" >Login</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    
+    </div>

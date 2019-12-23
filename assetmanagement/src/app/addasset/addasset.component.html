@@ -1,0 +1,53 @@
+<div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+
+    <div class="card col-md-7 offset-3 text-center card-body mt-5 " style="width: 50%;height:90%;border: 0px solid ">
+        <div class="card-header bg-Link ">
+            <h1>ADD ASSET</h1>
+        </div>
+
+        <form #addassetform='ngForm' (ngSubmit)='AddAsset(addassetform)'>
+            <div class="form-group row mt-5 ml-3 col-md-10">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Asset Description</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="asset_desc" name="asset_desc" placeholder="Asset description"
+                        #asset_desc="ngModel" ngModel required>
+                    <div *ngIf="asset_desc.touched && asset_desc.invalid">
+                        <p class="alert alert-danger" *ngIf="asset_desc.errors.required">*This field is required </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row mt-5 ml-3 col-md-10">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Asset Name</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="asset_name" name="asset_name"
+                            placeholder="Asset Name" #asset_name="ngModel" ngModel required>
+                        <div *ngIf="asset_name.touched && asset_name.invalid">
+                            <p class="alert alert-danger" *ngIf="asset_name.errors.required">*This field is required
+                            </p>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="form-group row mt-5 ml-3 col-md-10">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Asset Quantity</label>
+                <div class="col-sm-8">
+                    <input type="number" class="form-control" id="asset_quantity" name="asset_quantity" placeholder="Quantity"
+                        #asset_quantity="ngModel" ngModel required>
+                    <div *ngIf="asset_quantity.touched && asset_quantity.invalid">
+                        <p class="alert alert-danger" *ngIf="asset_quantity.errors.required">*This field is required </p>
+                    </div>
+                </div>
+            </div>
+
+ 
+          
+
+
+            <div class="form-group row  text-center">
+                <div class="col-sm-9">
+                    <button type="submit" class="btn btn-primary float-right">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>

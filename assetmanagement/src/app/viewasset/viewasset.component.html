@@ -1,0 +1,24 @@
+<div class="container mt-4">
+        <table class="table table-bordered table-hover">
+                <thead class="thead bg-warning">
+                    <tr>
+                        <th>Index</th>
+                        <th>Asset Name</th>
+                        <th>Asset Description</th>
+                        <th>Quantity</th>
+                        <th>Modify</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                  <!-- | filter : search; index as i' -->
+                    <tr *ngFor='let asset of assets' >
+                        <td>{{asset.asset_id}}</td>
+                        <td>{{asset.asset_name}}</td>
+                        <td>{{asset.asset_desc}}</td>
+                        <td>{{asset.asset_quantity}}</td>
+                        <td><button class="btn btn-link">Modify</button></td>
+                    </tr>
+                </tbody>
+              </table>
+</div>
